@@ -24,14 +24,16 @@ app.listen(PORT, () => {
 
 // Routes
 app.get("/api", (req, res) => {
-  axios
-    .get("https://api.github.com/users/reedbarger")
-    .then(response => {
-      console.log("WORKING");
-      res.json({ user: "Richard is the Greatest!" });
-    })
-    .catch(err => {
-      res.json({ user: "Something didn't work! ", err: err });
-      console.log("Shit", err);
-    });
+  // axios
+  //   .get("https://api.github.com/users/reedbarger")
+  //   .then(response => {
+  //     console.log("WORKING");
+  //     res.json({ user: "Richard is the Greatest!" });
+  //   })
+  //   .catch(err => {
+  //     res.json({ user: "Something didn't work! ", err: err });
+  //     console.log("Shit", err);
+  //   });
+
+  res.json({ user: "Axios is not working" });
 });
