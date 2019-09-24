@@ -5,6 +5,8 @@ const cors = require("cors"); // Cross Origin Resourse Sharing ( to make request
 
 // Middleware
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
