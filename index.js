@@ -26,7 +26,9 @@ app.get("/api", (req, res) => {
     .get("https://api.github.com/users/reedbarger")
     .then(response => {
       console.log("WORKING");
-      res.json({ user: "Richard is the Greatest!" });
+      response.json({ user: "Richard is the Greatest!" });
     })
-    .catch(err => console.log("Shit", err));
+    .catch(err => {
+      console.log("Shit", err);
+    });
 });
