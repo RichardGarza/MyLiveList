@@ -12,6 +12,7 @@ function App() {
         setUser(res.data);
       })
       .catch(err => {
+        setUser(err);
         console.log(err);
       });
   }, []);
