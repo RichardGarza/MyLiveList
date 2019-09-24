@@ -16,15 +16,13 @@ function App() {
       });
   }, []);
   return (
-    user && (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{JSON.stringify(user)}</p>
-          <p>Users</p>
-        </header>
-      </div>
-    )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+      <p>{JSON.stringify(user)}</p>
+      <p>Here are the users</p>
+    </div>
   );
 }
 
