@@ -29,6 +29,7 @@ app.get("/api", (req, res) => {
       res.json({ user: "Richard is the Greatest!" });
     })
     .catch(err => {
+      res.json({ user: "Something didn't work! ", err: err });
       console.log("Shit", err);
     });
 });
